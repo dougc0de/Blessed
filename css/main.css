@@ -3383,3 +3383,11 @@ input.num-product::-webkit-inner-spin-button {
     display: block;                         /* asegura bloque completo */
   }
 }
+
+footer {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
