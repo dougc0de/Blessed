@@ -3350,6 +3350,8 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 #loginformStylyes {
+    display: flex;
+    gap: 20px;
     background-color: #8f8f8f;
       color: white;
       font-size: 16px;
@@ -3365,3 +3367,19 @@ input.num-product::-webkit-inner-spin-button {
     transform:translateY(-4px);
 }
 
+@media (max-width: 576px) {                  /* Bootstrap xs */
+  #loginformStylyes form {
+    display: flex;
+    flex-direction: column;                 /* apila en vertical */
+    align-items: center;                    /* centra cada hijo */
+  }
+
+  /* Sobrescribimos el 100 % de Bootstrap */
+  #loginformStylyes .form-control,
+  #loginformStylyes .btn {
+    width: 80% !important;                  /* cualquier valor 70-90 % luce bien */
+    max-width: 320px;                       /* opcional: evita que crezcan de más */
+    margin: 0 auto;                         /* centra horizontalmente */
+    display: block;                         /* asegura bloque completo */
+  }
+}
