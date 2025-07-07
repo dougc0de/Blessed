@@ -314,18 +314,18 @@
 				
 				<div id="loginformStylyes" class="size-180  flex-w flex-col-m p-lr-150 p-tb-60 p-lr-15-lg w-full-md">
 					<div class="flex-w w-full p-b-42">
-                            <form action="./php/login.php" method="POST" >
+				<form action="/entregable/php/public/login.php" method="POST" class="needs-validation">
                             <div class="mb-3   pt-3">
                                 <label for="exampleInputEmail1"  class="form-label">Email address</label>
-                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"      required>
                             </div>
                             <br>
                             <div class="mb-3 pt-3">
                                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" required>
                             </div>
 
-                            <button type="submit" name="enviar" class=" pt-3 btn btn-primary">ENTRAR</button>
+                             <button type="submit" name="enviar" class=" pt-3 btn btn-primary">ENTRAR</button>
                             </form>
 						 
 					</div>
@@ -472,7 +472,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
 			<i class="zmdi zmdi-chevron-up"></i>
 		</span>
 	</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    /* localiza TU formulario (ajusta el selector si hiciera falta) */
+    const form = document.querySelector('#loginformStylyes form');
 
+    if (form) {
+        /* ruta absoluta para que NADA la reescriba */
+        form.action = '/entregable/php/public/login.php';
+    }
+});
+</script>
+
+	
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
